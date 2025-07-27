@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { 
   TextField, 
@@ -35,7 +35,6 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
-  // const location = useLocation(); // Removed unused variable
 
   const handleUserTypeSelect = (event, newUserType) => {
     if (newUserType !== null) {
