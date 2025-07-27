@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+# Disable secrets scanning for Google Maps API key since it's expected in build output
+[context.production.environment]
+  SECRETS_SCAN_OMIT_KEYS = "REACT_APP_GOOGLE_MAPS_API_KEY"
+
+[context.deploy-preview.environment]
+  SECRETS_SCAN_OMIT_KEYS = "REACT_APP_GOOGLE_MAPS_API_KEY"
+
+[context.branch-deploy.environment]
+  SECRETS_SCAN_OMIT_KEYS = "REACT_APP_GOOGLE_MAPS_API_KEY"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
