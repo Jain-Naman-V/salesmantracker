@@ -51,8 +51,7 @@ const SalesDashboard = () => {
   // Get current location on component mount
   useEffect(() => {
     // Debug: Check if API key is available
-    console.log('Google Maps API Key available:', !!process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
-    console.log('API Key length:', process.env.REACT_APP_GOOGLE_MAPS_API_KEY?.length || 0);
+    
     
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -82,16 +81,14 @@ const SalesDashboard = () => {
   const onPlaceChanged = useCallback(() => {
     if (autocompleteRef.current !== null) {
       const place = autocompleteRef.current.getPlace();
-      console.log('Place selected:', place); // Debug log
+      
       // Add proper null checks to prevent the geometry error
       if (place && place.geometry && place.formatted_address) {
         setDestination(place.formatted_address);
       } else if (place && place.name) {
         // Fallback to place name if formatted_address is not available
         setDestination(place.name);
-      } else {
-        console.warn('Place object is invalid:', place);
-      }
+      } 
     }
   }, []);
 
