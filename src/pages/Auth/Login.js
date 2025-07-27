@@ -35,7 +35,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
+  // const location = useLocation(); // Removed unused variable
 
   const handleUserTypeSelect = (event, newUserType) => {
     if (newUserType !== null) {

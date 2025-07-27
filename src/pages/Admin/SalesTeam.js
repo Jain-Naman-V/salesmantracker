@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Typography,
@@ -29,7 +29,7 @@ import {
 } from '@mui/icons-material';
 
 const SalesTeam = () => {
-  const [salesTeam, setSalesTeam] = useState([
+  const [salesTeam] = useState([
     {
       id: 1,
       name: 'John Doe',

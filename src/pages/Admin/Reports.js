@@ -22,7 +22,6 @@ import {
 import {
   TrendingUp as TrendingUpIcon,
   TrendingDown as TrendingDownIcon,
-  Assessment as AssessmentIcon,
   Download as DownloadIcon
 } from '@mui/icons-material';
 
