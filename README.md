@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+# Salesman Tracker - React Application
+
+A React-based application for tracking sales trips with Google Maps integration.
+
+## Prerequisites
+
+Before running this application, you need to set up a Google Maps API key:
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select an existing one
+3. Enable the following APIs:
+   - Maps JavaScript API
+   - Places API
+   - Directions API
+   - Geocoding API
+4. Create credentials (API Key) for the enabled APIs
+5. Create a `.env` file in the root directory with:
+   ```
+   REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+   ```
+
+## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
